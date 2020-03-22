@@ -1,0 +1,240 @@
+.bbco-chat-container {
+  width: 250px;
+  padding: 0px;
+  border: solid 1px #ccc;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  z-index: 1050;
+}
+
+.bbco-chat-container .bbco-chat-container-wrapper {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  width: 100%;
+  background-color: #EAECF4;
+}
+
+.bbco-chat-container .bbco-chat-container-wrapper .chat-header {
+  display: flex;
+  box-sizing: border-box;
+  height: 50px;
+  padding: 0 5px;
+  width: 100%;
+  align-items: center;
+  background-color: #61C7D0;
+  background-image: linear-gradient(to right, #CFD7DB, #61C7D0);
+  position: relative;
+}
+
+.bbco-chat-container .bbco-chat-container-wrapper .chat-header .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: block;
+  background-color: #dedede;
+}
+
+.bbco-chat-container .bbco-chat-container-wrapper .chat-header .avatar img {
+  width: 100%;
+}
+
+.bbco-chat-container .bbco-chat-container-wrapper .chat-header .username {
+  padding: 5px;
+  font-size: 12px;
+}
+
+.bbco-chat-container .bbco-chat-container-wrapper .chat-header .maximize,
+.bbco-chat-container .bbco-chat-container-wrapper .chat-header .minimize {
+  position: absolute;
+  padding: 5px;
+  cursor: pointer;
+  right: 5px;
+  top: 5px;
+}
+
+.bbco-chat-container .bbco-chat-container-wrapper .chat-header .maximize {
+  display: none;
+}
+
+.bbco-chat-container .bbco-chat-container-wrapper .chat-header .minimize {
+  display: block;
+}
+
+.bbco-chat-container .bbco-chat-container-wrapper .chat-alert {
+  display: none;
+}
+
+.bbco-chat-container .bbco-chat-container-wrapper .chat-history {
+  flex: 1 1 0;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 300px;
+}
+
+.bbco-chat-container .bbco-chat-container-wrapper .chat-history .loader {
+  font-size: 10px;
+  padding: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.bbco-chat-container .bbco-chat-container-wrapper .chat-history .message {
+  list-style: none;
+  padding: 0;
+  margin: 10px 5px 0 5px;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-flow: row-reverse;
+  align-items: flex-start;
+}
+
+.bbco-chat-container .bbco-chat-container-wrapper .chat-history .message .avatar {
+  flex: none;
+}
+
+.bbco-chat-container .bbco-chat-container-wrapper .chat-history .message > p {
+  border-radius: 5px;
+  background-color: #61C7D0;
+  padding: 5px;
+  position: relative;
+  margin: 0;
+  margin-right: 10px;
+  font-size: 13px;
+  line-height: 16px;
+  max-width: calc(100% - 20px);
+  word-break: break-word;
+}
+
+.bbco-chat-container .bbco-chat-container-wrapper .chat-history .message > p:before {
+  content: '';
+  position: absolute;
+  border: solid 10px transparent;
+  border-top-width: 0;
+  border-bottom-color: #61C7D0;
+  right: -10px;
+  top: 0px;
+  transform: rotate(180deg);
+}
+
+.bbco-chat-container .bbco-chat-container-wrapper .chat-history .message.sent {
+  flex-flow: row;
+}
+
+.bbco-chat-container .bbco-chat-container-wrapper .chat-history .message.sent > p {
+  margin-left: 10px;
+  margin-right: auto;
+  background-color: #FDFDFD;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.bbco-chat-container .bbco-chat-container-wrapper .chat-history .message.sent > p:before {
+  left: -10px;
+  right: auto;
+  border-bottom-color: #FDFDFD;
+}
+
+.bbco-chat-container .bbco-chat-container-wrapper .chat-history .message.system > p {
+  margin: 0 auto;
+  background-color: #FEF8DF;
+  text-align: center;
+}
+
+.bbco-chat-container .bbco-chat-container-wrapper .chat-history .message.system > p:before {
+  content: none;
+  border-bottom-color: #FEF8DF;
+}
+
+.bbco-chat-container .bbco-chat-container-wrapper .chat-history .message label.title {
+  font-size: 0.8em;
+  font-weight: bold;
+  font-family: 'Verdana';
+  display: block;
+  text-align: right;
+}
+
+.bbco-chat-container .bbco-chat-container-wrapper .chat-history .message label.title span {
+  font-weight: normal;
+}
+
+.bbco-chat-container .bbco-chat-container-wrapper .chat-history .message .btn.reconnect {
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.bbco-chat-container .bbco-chat-container-wrapper .chat-box {
+  flex: none;
+  min-height: 62px;
+  width: 100%;
+  order: 3;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.bbco-chat-container.collapsed .bbco-chat-container .bbco-chat-container-wrapper .chat-box {
+  display: none;
+}
+
+.bbco-chat-container .bbco-chat-container-wrapper .chat-box > textarea {
+  margin-right: 30px;
+}
+
+.bbco-chat-container .bbco-chat-container-wrapper .chat-box .chat-input {
+  min-height: 20px;
+  max-height: 100px;
+  outline: none;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 5px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #ffffff;
+  flex: 1 1 0;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.bbco-chat-container .bbco-chat-container-wrapper .chat-box > .btn.send {
+  outline: none;
+  margin: 5px 5px 5px 0;
+  font-size: 16px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.bbco-chat-container.disconnected {
+  display: 'block';
+}
+
+.bbco-chat-container.collapsed .chat-box,
+.bbco-chat-container.collapsed .chat-history {
+  display: none;
+}
+
+.bbco-chat-container.collapsed .chat-header .maximize {
+  display: block;
+}
+
+.bbco-chat-container.collapsed .chat-header .minimize {
+  display: none;
+}
+
+.ion {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
