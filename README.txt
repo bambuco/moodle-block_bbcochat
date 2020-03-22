@@ -9,17 +9,17 @@ Download zip package, extract the counter folder and upload this folder into blo
 
 ABOUT
 =============
-Developed by: David Herney Bernal García - davidherney at gmail dot com
-GIT: https://github.com/davidherney/moodle-block_bbcochat
+Developed by: David Herney Bernal García - david dot bernal at bambuco dot co
+GIT: https://github.com/bambuco/moodle-block_bbcochat
 
 IN VERSION
 =============
-2011081904:
-Start again
+2020032100:
+Start project
 
 
 RELEASE NAMES
 =============
-My prefered books characters
+BamboCo team
 
-Atos: The honor and the dedication in The three musketeers (big Dummas)
+Otero: the bbcochat main developer
