@@ -16,7 +16,7 @@
 /**
  * Library of internal classes and functions for component socket into local Tepuy plugin
  *
- * @package   block_bbcochat
+ * @module    block_bbcochat/config
  * @copyright 2020 David Herney - cirano
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */

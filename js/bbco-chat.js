@@ -8,6 +8,7 @@
     var ERROR = 'error';
     var INFO = 'info';
     var MODEDEBUG = false;
+    var NOTPRINTACTIONS = ['playerconnected', 'playerdisconnected'];
     var actions = {
         CHATMSG: 'chatmsg',
         CHATHISTORY: 'chathistory',
@@ -305,7 +306,7 @@
     function onChatHistory(msg) {
         if (!sessionData.user && msg.user && msg.user.id == sessionData.userid) {
             sessionData.user = msg.user;
-            $('.chat-header .username').html('<strong>'+msg.user.name+'</strong>');
+            $('.chat-header .username').html('<strong>' + msg.user.name + '</strong>');
         }
         var msgs = msg.data;
         var lastid;
@@ -353,6 +354,11 @@
     }
 
     function addChatLog(message) {
+
+        if ((message.issystem === "1" || message.issystem === 1) &&
+                message.originalaction && NOTPRINTACTIONS.includes(message.originalaction)) {
+            return true;
+        }
 
         var $mess = $('<li class="message"></li>'),
             $text = $('<p></p>'),

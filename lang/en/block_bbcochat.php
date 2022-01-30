@@ -24,3 +24,13 @@
 
 $string['pluginname'] = 'BambuCo Chat';
 $string['bbcochat:addinstance'] = 'Add a new BambuCo Chat';
+
+$string['nochatwarning'] = 'Not chats found in the course. You need create one chat at least.';
+$string['config_chatconnected'] = 'Moodle Chat to connect BbCoChat';
+$string['newblocktitle'] = 'Synchronous chat';
+$string['notchatconfigured'] = 'Sorry, the component is not enabled yet. Please, connect a chat activity in the block properties.';
+$string['notinsitelevel'] = 'The chat is not enabled in site level.';
+$string[''] = '';
+$string[''] = '';
+$string[''] = '';
+$string[''] = '';

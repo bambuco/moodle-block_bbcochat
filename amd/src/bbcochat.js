@@ -16,17 +16,15 @@
 /**
  * Library of internal classes and functions for component socket into local Tepuy plugin
  *
- * @package   block_bbcochat
+ * @module    block_bbcochat/bbcochat
  * @copyright 2020 David Herney - cirano
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+import 'block_bbcochat/bbcochatcore';
+import $ from 'jquery';
 
-define(['jquery', 'block_bbcochat/bbcochatcore'], function($, bbcochatcore) {
-
-    return {
-        init: function(courseid) {
-
-            $(document).bbcochat({ "authurl": M.cfg.wwwroot + "/local/tepuy/components/socket/bycourse.php?id=" + courseid });
-        }
-    };
-});
+export const init = (courseid, cmchatid) => {
+   $(document).bbcochat({
+       "authurl": M.cfg.wwwroot + "/local/tepuy/components/socket/index.php?type=chat&id=" + cmchatid
+   });
+};
