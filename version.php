@@ -25,8 +25,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2020032100;
-$plugin->requires  = 2011120507;        // Requires this Moodle version
+$plugin->version   = 2020032101;
+$plugin->requires  = 2020110908;        // Requires this Moodle version
 $plugin->component = 'block_bbcochat'; // Full name of the plugin (used for diagnostics)
 $plugin->maturity = MATURITY_BETA;
-$plugin->release = 'Otero';
+$plugin->release = 'Lore';
